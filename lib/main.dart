@@ -7,6 +7,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+
   const MyApp({super.key});
 
   @override
@@ -31,7 +32,7 @@ class _ScreenState extends State<Screen> {
   Future<void> _checkPrinter() async {
     final connected = await PrinterService.isPrinterConnected();
     _showAlert(
-      connected ? "Printer is connected ✅" : "Printer is not connected ❌",
+      connected ? "Printer is connected  ✅" : "Printer is not connected ❌",
     );
   }
 
