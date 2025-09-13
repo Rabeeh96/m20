@@ -2,7 +2,6 @@ import 'package:demom20/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +16,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(home: Screen());
+    return const GetMaterialApp(home: Screen());
   }
 }
 
@@ -49,17 +48,16 @@ class _ScreenState extends State<Screen> {
   void _showAlert(String message) {
     showDialog(
       context: context,
-      builder:
-          (_) => AlertDialog(
-            title: const Text("Printer Status"),
-            content: Text(message),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text("OK"),
-              ),
-            ],
+      builder: (_) => AlertDialog(
+        title: const Text("Printer Status"),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("OK"),
           ),
+        ],
+      ),
     );
   }
 
