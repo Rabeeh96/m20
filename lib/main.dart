@@ -43,7 +43,7 @@ class _ScreenState extends State<Screen> {
 
   Future<void> _testPrint2() async {
     final result = await PrinterService.printText("مرحبا");
-    _showAlert(result ?? "Unknown print results");
+    _showAlert(result ?? "Unknown print resultss");
   }
 
   void _showAlert(String message) {
